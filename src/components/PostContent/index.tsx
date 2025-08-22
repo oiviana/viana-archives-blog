@@ -1,29 +1,18 @@
 import { PortableText, PortableTextComponents } from "@portabletext/react"
-import { PortableTextBlock } from "sanity"
-import { Prism as SyntaxHighlighter } from "react-syntax-highlighter"
+import type { PortableTextBlock } from "@portabletext/types"
 import Image from "next/image"
-import { CodeBlock, ImageBlock } from "@/types/post-content"
+import { CodeBlockType , ImageBlock } from "@/types/post-content"
 import { urlFor } from "@/utils/sanityImageBuilder"
-
+import  CodeBlock from "../CodeBlock.tsx"
 
 const components: PortableTextComponents = {
   types: {
-    code: ({ value }: { value: CodeBlock }) => (
-      <div className="my-4">
-        <button
-          onClick={() => navigator.clipboard.writeText(value.code)}
-          className="bg-gray-200 px-2 py-1 rounded text-sm mb-2"
-        >
-          Copiar
-        </button>
-        <SyntaxHighlighter language={value.language || "javascript"}>
-          {value.code}
-        </SyntaxHighlighter>
-      </div>
+    code: ({ value }: { value: CodeBlockType }) => (
+      <CodeBlock code={value.code} language={value.language} />
     ),
     image: ({ value }: { value: ImageBlock }) => (
       <Image
-        src={urlFor(value.asset)} 
+        src={urlFor(value.asset)}
         alt={value.alt || ""}
         width={800}
         height={600}
@@ -36,3 +25,4 @@ const components: PortableTextComponents = {
 export function BlogPostContent({ content }: { content: PortableTextBlock[] }) {
   return <PortableText value={content} components={components} />
 }
+
