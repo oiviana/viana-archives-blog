@@ -1,4 +1,4 @@
-export type CodeBlock = {
+export type CodeBlockType = {
   _type: "code"
   language?: string
   code: string

@@ -23,5 +23,5 @@ export interface BlogPostProps {
     }
   }
   references?: PortableTextBlock[] 
-  postContent?: PortableTextBlock[] 
+  postContent: PortableTextBlock[] 
 }
