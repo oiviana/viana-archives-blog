@@ -2,7 +2,7 @@ import { PortableText, PortableTextComponents } from "@portabletext/react"
 import type { PortableTextBlock } from "@portabletext/types"
 import Image from "next/image"
 import { CodeBlockType , ImageBlock } from "@/types/post-content"
-import { urlFor } from "@/utils/sanityImageBuilder"
+import { generateImageUrl } from "@/utils/sanityImageBuilder"
 import  CodeBlock from "../CodeBlock.tsx"
 
 const components: PortableTextComponents = {
@@ -12,7 +12,7 @@ const components: PortableTextComponents = {
     ),
     image: ({ value }: { value: ImageBlock }) => (
       <Image
-        src={urlFor(value.asset)}
+        src={generateImageUrl(value.asset)}
         alt={value.alt || ""}
         width={800}
         height={600}

@@ -12,7 +12,7 @@ interface PostCardProps {
 
 export default function PostCard({ postTitle, slug, thumbnail }: PostCardProps) {
     return (
-        <div className="bg-blue-400 rounded w-full max-w-[320px]">
+        <div className="bg-blue-400 rounded w-full max-w-[320px] p-2">
             <Image
                 src={thumbnail}
                 width={200}

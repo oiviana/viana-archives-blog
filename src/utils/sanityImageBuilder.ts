@@ -4,7 +4,6 @@ import { ImageBlock } from "@/types/post-content"
 
 const builder = imageUrlBuilder(sanityClient)
 
-// Função tipada corretamente
-export function urlFor(source: ImageBlock["asset"]): string {
+export function generateImageUrl(source: ImageBlock["asset"]): string {
   return builder.image(source).url()
 }

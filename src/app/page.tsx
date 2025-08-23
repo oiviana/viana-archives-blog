@@ -1,7 +1,7 @@
 import PostCard from "@/components/PostCard";
 import { BlogPostProps } from "@/types/post";
 import { getPosts } from "@/utils/getPosts";
-import { urlFor } from "@/utils/sanityImageBuilder";
+import { generateImageUrl } from "@/utils/sanityImageBuilder";
 
 export default async function Home() {
   const posts: BlogPostProps[] = await getPosts()
@@ -16,7 +16,7 @@ export default async function Home() {
           key={index}
           authorName={post.authorName}
           readingTime={post.readingTime}
-          thumbnail={urlFor(post.thumbnailImage.asset)}
+          thumbnail={generateImageUrl(post.thumbnailImage.asset)}
         />
       ))}
     </div>
