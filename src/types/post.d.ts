@@ -4,6 +4,7 @@ export interface BlogPostProps {
   _id: string
   _createdAt: string
   postTitle: string
+  postDescription: string
   slug: {
     current: string
   }
@@ -16,12 +17,7 @@ export interface BlogPostProps {
     }
   }
   readingTime: string
-  thumbnailImage?: {
-    asset: {
-      _ref: string
-      url: string
-    }
-  }
+  thumbnailImage: ImageBlock
   references?: PortableTextBlock[] 
   postContent: PortableTextBlock[] 
 }
