@@ -1,20 +1,23 @@
+import PostCard from "@/components/PostCard";
 import { BlogPostProps } from "@/types/post";
 import { getPosts } from "@/utils/getPosts";
-import Link from "next/link";
+import { urlFor } from "@/utils/sanityImageBuilder";
 
 export default async function Home() {
   const posts: BlogPostProps[] = await getPosts()
-  console.log("posts ", posts)
+
   return (
     <div className="font-sans grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20">
       {posts?.map((post, index) => (
-        <Link
+        <PostCard
+          postTitle={post.postTitle}
+          slug={post.slug.current}
+          postDescription={post.postDescription}
           key={index}
-          href={`/artigos/${post.slug.current}`}
-          className="flex bg-amber-300 p-4 rounded hover:bg-amber-400 transition"
-        >
-          {post.postTitle}
-        </Link>
+          authorName={post.authorName}
+          readingTime={post.readingTime}
+          thumbnail={urlFor(post.thumbnailImage.asset)}
+        />
       ))}
     </div>
   );
