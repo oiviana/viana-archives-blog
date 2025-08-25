@@ -1,24 +1,12 @@
-import PostCard from "@/components/PostCard";
-import { BlogPostProps } from "@/types/post";
-import { getPosts } from "@/utils/getPosts";
-import { generateImageUrl } from "@/utils/sanityImageBuilder";
+import { Suspense } from "react"
+import PostsGrid from "../components/PostGrid"
 
-export default async function Home() {
-  const posts: BlogPostProps[] = await getPosts()
-
+export default function Home() {
   return (
-    <div className="font-sans grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20">
-      {posts?.map((post, index) => (
-        <PostCard
-          postTitle={post.postTitle}
-          slug={post.slug.current}
-          postDescription={post.postDescription}
-          key={index}
-          authorName={post.authorName}
-          readingTime={post.readingTime}
-          thumbnail={generateImageUrl(post.thumbnailImage.asset)}
-        />
-      ))}
+    <div className="min-h-screen p-8 pb-20 sm:p-20">
+      <Suspense fallback={<h2 className="text-xl font-semibold">Carregando...</h2>}>
+        <PostsGrid />
+      </Suspense>
     </div>
-  );
+  )
 }
