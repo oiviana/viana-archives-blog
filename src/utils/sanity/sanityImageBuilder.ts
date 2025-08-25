@@ -1,5 +1,5 @@
 import imageUrlBuilder from "@sanity/image-url"
-import { sanityClient } from "../lib/sanityClient"
+import { sanityClient } from "@/lib/sanityClient"
 import { ImageBlock } from "@/types/post-content"
 
 const builder = imageUrlBuilder(sanityClient)
