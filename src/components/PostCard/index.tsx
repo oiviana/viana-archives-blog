@@ -10,20 +10,25 @@ interface PostCardProps {
     thumbnail: string
 }
 
-export default function PostCard({ postTitle, slug, thumbnail }: PostCardProps) {
+export default function PostCard({ postTitle, slug, thumbnail, postDescription, readingTime }: PostCardProps) {
     return (
-        <div className="bg-blue-400 rounded w-full max-w-[320px] p-2">
-            <Image
-                src={thumbnail}
-                width={200}
-                height={200}
-                alt={postTitle}
-            />
-            <h2>{postTitle}</h2>
-            <Link
-                href={`/artigos/${slug}`}
-                className="flex bg-amber-300 p-4 rounded hover:bg-amber-400 transition"
-            ></Link>
-        </div>
+        <Link className="bg-[#23212c] rounded w-full max-w-[320px] h-[380px] p-2"
+         href={`/artigos/${slug}`}
+         >
+            <div>
+                <Image
+                    src={thumbnail}
+                    width={280}
+                    height={180}
+                    alt={postTitle}
+                    objectFit="contain"
+                />
+            </div>
+            <div>
+                   <h2>{postTitle}</h2>
+                   <h3>{postDescription}</h3>
+                   <span>tempo de leitura: {readingTime} minutos</span>
+            </div>
+        </Link>
     )
 }

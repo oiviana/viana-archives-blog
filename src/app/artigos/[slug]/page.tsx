@@ -1,4 +1,4 @@
-import { getPostBySlug } from "../../../utils/getPostBySlug";
+import { getPostBySlug } from "../../../utils/sanity/getPostBySlug";
 import { BlogPostContent } from "../../../components/PostContent";
 import { BlogPostProps } from "@/types/post";
 
@@ -9,7 +9,7 @@ type PostPageProps = {
 export default async function PostPage({ params }: PostPageProps) {
     const { slug } = await params
     const post:BlogPostProps = await getPostBySlug(slug);
-console.log("post ", post)
+
     if (!post) {
         return <div>Post não encontrado</div>;
     }
