@@ -1,5 +1,7 @@
+import Skeleton from "@/components/Skeleton";
+
 export default function Loading(){
     return(
-        <h3>Carregando</h3>
+       <Skeleton skeletonType="page-content" />
     )
 }
