@@ -10,12 +10,7 @@ export interface BlogPostProps {
   }
   postDate: string
   authorName: string
-  authorImage?: {
-    asset: {
-      _ref: string
-      url: string
-    }
-  }
+  authorImage:ImageBlock
   readingTime: string
   thumbnailImage: ImageBlock
   references?: PortableTextBlock[] 
