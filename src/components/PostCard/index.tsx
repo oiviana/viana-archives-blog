@@ -15,13 +15,13 @@ export default function PostCard({ postTitle, slug, thumbnail, postDescription, 
         <Link className="bg-[#23212c] rounded w-full max-w-[320px] h-[380px] p-2"
          href={`/artigos/${slug}`}
          >
-            <div>
+            <div className="overflow-hidden max-h-[180px]">
                 <Image
                     src={thumbnail}
-                    width={280}
+                    width={305}
                     height={180}
                     alt={postTitle}
-                    objectFit="contain"
+                    objectFit="cover"
                 />
             </div>
             <div>

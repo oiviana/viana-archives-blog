@@ -17,6 +17,7 @@ const components: PortableTextComponents = {
         width={800}
         height={600}
         className="my-4 rounded"
+        loading="lazy"
       />
     ),
   },
