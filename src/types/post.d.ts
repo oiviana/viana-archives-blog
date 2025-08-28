@@ -9,6 +9,7 @@ export interface BlogPostProps {
     current: string
   }
   postDate: string
+  postCategory: string
   authorName: string
   authorImage:ImageBlock
   readingTime: string

@@ -17,6 +17,7 @@ export default async function PostGrid() {
           authorName={post.authorName}
           readingTime={post.readingTime}
           thumbnail={generateImageUrl(post.thumbnailImage.asset)}
+          postCategory={post.postCategory}
         />
       ))}
     </div>

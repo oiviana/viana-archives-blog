@@ -14,7 +14,7 @@ const components: PortableTextComponents = {
       <Image
         src={generateImageUrl(value.asset)}
         alt={value.alt || ""}
-        width={800}
+        width={850}
         height={600}
         className="my-4 rounded"
         loading="lazy"

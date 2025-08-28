@@ -1,7 +1,9 @@
 "use client";
 
 import { useState } from "react";
-import { FaRegCopy,  FaCheck } from "react-icons/fa";
+import { FaCheck } from "react-icons/fa";
+import { MdContentCopy } from "react-icons/md";
+
 import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
 import { oneDark, oneLight } from "react-syntax-highlighter/dist/esm/styles/prism";
 
@@ -27,22 +29,22 @@ export default function CodeBlock({ code, language = "plaintext", theme = "dark"
   return (
     <div className="my-4 border rounded-lg overflow-hidden border-red-500">
       <div className="flex justify-between items-center bg-gray-100 dark:bg-gray-800 px-3 py-2">
-        <span className="text-sm font-mono text-gray-600 dark:text-gray-300">
+        <span className="text-base font-mono text-gray-600 dark:text-gray-300">
           {language}
         </span>
         <button
           onClick={handleCopy}
-          className="text-xs bg-gray-200 dark:bg-gray-700 hover:bg-gray-300 dark:hover:bg-gray-600 px-2 py-1 min-w-[80px] rounded transition cursor-pointer flex gap-2 items-center justify-center"
+          className="text-sm bg-gray-200 dark:bg-gray-700 hover:bg-gray-300 dark:hover:bg-gray-600 px-2 py-1 min-w-[90px] rounded transition cursor-pointer flex gap-2 items-center justify-center"
         >
           {!copied && (
             <>
-              <FaRegCopy />
+              <MdContentCopy size={15} />
               Copiar
             </>
           )}
           {copied && (
             <>
-             <FaCheck/>
+             <FaCheck size={13} className="text-green-600"/>
               Copiado
             </>
           )
