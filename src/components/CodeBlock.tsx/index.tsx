@@ -34,8 +34,11 @@ export default function CodeBlock({ code, language = "plaintext", theme = "dark"
         </span>
         <button
           onClick={handleCopy}
-          className="text-sm bg-gray-200 dark:bg-gray-700 hover:bg-gray-300 dark:hover:bg-gray-600 px-2 py-1 min-w-[90px] rounded transition cursor-pointer flex gap-2 items-center justify-center"
-        >
+className={`text-sm border-1 px-2 py-1 min-w-[93px] rounded transition cursor-pointer flex gap-2 items-center justify-center
+  ${copied 
+    ? "border-green-400 bg-green-600" 
+    : "bg-gray-200 dark:bg-gray-700 border-transparent hover:bg-gray-300 dark:hover:bg-gray-600"
+  }`}        >
           {!copied && (
             <>
               <MdContentCopy size={15} />
@@ -44,7 +47,7 @@ export default function CodeBlock({ code, language = "plaintext", theme = "dark"
           )}
           {copied && (
             <>
-             <FaCheck size={13} className="text-green-600"/>
+             <FaCheck size={13}/>
               Copiado
             </>
           )

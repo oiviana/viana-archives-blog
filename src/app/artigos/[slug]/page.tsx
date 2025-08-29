@@ -38,8 +38,11 @@ export default async function PostPage({ params }: PostPageProps) {
                     loading="eager"
                 />
                 <div className="absolute bg-gradient-to-t from-[#141217] from-35% to-transparent w-full bottom-0 p-2 px-4 rounded-b-2xl" >
-                    <h1 className="text-lg lg:text-4xl mb-3 font-lora">{post.postTitle}</h1>
-                    <div className="flex items-center gap-4">
+                    <h1 className="text-lg lg:text-4xl mb-3 font-lora font-semibold">{post.postTitle}</h1>
+                    <h1 className="text-base lg:text-xl mb-3 font-lora ">{post.postDescription}</h1>
+                </div>
+            </div>
+                         <div className="flex items-center gap-4">
                         <Image
                             src={generateImageUrl(post.authorImage)}
                             width={56}
@@ -53,9 +56,7 @@ export default async function PostPage({ params }: PostPageProps) {
 
                         </div>
                     </div>
-                </div>
-            </div>
-            <div className="flex flex-col my-7 gap-3 font-lora">
+            <div className="flex flex-col my-7 gap-3 font-lora mb-14">
                 <span>Tempo de leitura: {post.readingTime} minutos.</span>
                 <span>
                     Publicado em:{" "}
@@ -66,7 +67,7 @@ export default async function PostPage({ params }: PostPageProps) {
                     })}{"."}
                 </span>
             </div>
-            <article className="font-bitter leading-7 lg:leading-8 text-base lg:text-lg">
+            <article className="font-bitter leading-7 lg:leading-8 text-base lg:text-lg post-content">
                 <BlogPostContent content={post.postContent} />
             </article>
         </div>
