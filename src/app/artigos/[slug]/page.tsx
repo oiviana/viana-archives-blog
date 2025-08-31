@@ -5,6 +5,7 @@ import Image from "next/image";
 import { generateImageUrl } from "@/utils/sanity/sanityImageBuilder";
 import Link from "next/link";
 import { IoArrowBack } from "react-icons/io5";
+import CategoryFlag from "@/components/CategoryFlag";
 
 type PostPageProps = {
     params: Promise<{ slug: string }>;
@@ -21,7 +22,7 @@ export default async function PostPage({ params }: PostPageProps) {
     return (
         <div className="prose lg:prose-xl max-w-[850px] mx-auto py-10">
 
-            <Link href="/" className="flex items-center gap-3 my-3 font-bitter text-base">
+            <Link href="/" className="flex items-center gap-3 my-3 font-bitter text-base lg:text-lg hover:text-green-main transition-colors">
                 <IoArrowBack />
                 Voltar
             </Link>
@@ -38,27 +39,31 @@ export default async function PostPage({ params }: PostPageProps) {
                     loading="eager"
                 />
                 <div className="absolute bg-gradient-to-t from-[#141217] from-35% to-transparent w-full bottom-0 p-2 px-4 rounded-b-2xl" >
-                    <h1 className="text-lg lg:text-4xl mb-3 font-lora font-semibold">{post.postTitle}</h1>
-                    <h1 className="text-base lg:text-xl mb-3 font-lora ">{post.postDescription}</h1>
+                    <h1 className="text-lg lg:text-[3rem] mb-3 font-raleway font-semibold text-white-main">{post.postTitle}</h1>
+                    <article className="text-base lg:text-xl mb-3 font-bitter ">{post.postDescription}</article>
+                </div>
+                <div className="absolute right-7 top-7 w-max min-w-20">
+                    <CategoryFlag category={post.postCategory} />
                 </div>
             </div>
-                         <div className="flex items-center gap-4">
-                        <Image
-                            src={generateImageUrl(post.authorImage)}
-                            width={56}
-                            height={56}
-                            alt={post.postTitle}
-                            objectFit="contain"
-                            className="rounded-full"
-                        />
-                        <div className="text-lg font-jetbrains">
-                            <span>Autor: </span> <span>{post.authorName}</span>
+            <div className="flex items-center gap-4">
+                <Image
+                    src={generateImageUrl(post.authorImage)}
+                    width={56}
+                    height={56}
+                    alt={post.postTitle}
+                    objectFit="contain"
+                    className="rounded-full"
+                />
+                <div className="text-lg font-lora">
+                    <span>Autor: </span> <span className="text-white-secondary">{post.authorName}</span>
 
-                        </div>
-                    </div>
-            <div className="flex flex-col my-7 gap-3 font-lora mb-14">
-                <span>Tempo de leitura: {post.readingTime} minutos.</span>
-                <span>
+                </div>
+            </div>
+            <div className="flex flex-col my-7 gap-3 font-lora mb-8 lg:mb-16">
+                <span className="text-white-secondary">Tempo de leitura: {post.readingTime} minutos.</span>
+                <span
+                    className="text-white-secondary">
                     Publicado em:{" "}
                     {new Date(post.postDate).toLocaleDateString("pt-BR", {
                         day: "2-digit",

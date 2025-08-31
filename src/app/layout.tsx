@@ -1,10 +1,15 @@
 import type { Metadata } from "next";
-import {  Lora, JetBrains_Mono, Bitter } from "next/font/google";
+import {  Lora, JetBrains_Mono, Bitter, Playfair_Display, Oswald, Raleway } from "next/font/google";
 import "./globals.css";
 
 
 const lora = Lora({
   variable: "--font-lora",
+  subsets: ["latin"],
+});
+
+const playfair = Playfair_Display({
+  variable: "--font-playfair",
   subsets: ["latin"],
 });
 
@@ -15,6 +20,16 @@ const jetbrains = JetBrains_Mono({
 
 const bitter = Bitter({
   variable: "--font-bitter",
+  subsets: ["latin"],
+});
+
+const oswald = Oswald({
+  variable: "--font-oswald",
+  subsets: ["latin"],
+});
+
+const raleway = Raleway({
+  variable: "--font-raleway",
   subsets: ["latin"],
 });
 
@@ -31,7 +46,7 @@ export default function RootLayout({
   return (
     <html lang="pt-br">
       <body
-        className={`${lora.variable} ${jetbrains.variable} ${bitter.variable} antialiased`}
+        className={`${lora.variable} ${jetbrains.variable} ${bitter.variable}  ${playfair.variable} ${oswald.variable}  ${raleway.variable} antialiased`}
       >
         {children}
       </body>

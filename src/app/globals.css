@@ -2,21 +2,33 @@
 
 :root {
   --background: #141217;
-  --foreground: #fff;
+  --background-light: #23212C;
+  --background-extra-light: #5d5874;
+  --white-main: #f2f2f2;
+  --white-secondary: #c7c5d3;
+  --green-main: #89d83a;
 }
 
 @theme inline {
   --color-background: var(--background);
-  --color-foreground: var(--foreground);
+  --color-background-light: var(--background-light);
+  --color-background-extralight: var(--background-extra-light);
+  --color-white-main: var(--white-main);
+  --color-white-secondary: var(--white-secondary);
+  --color-green-main: var(--green-main);
+
   --font-jetbrains: var(--font-jet);
   --font-bitter: var(--font-bitter);
   --font-lora: var(--font-lora);
+  --font-playfair: var(--font-playfair);
+  --font-oswald: var(--font-oswald);
+  --font-raleway: var(--font-raleway);
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
     --background: #141217;
-    --foreground: #ededed;
+    --foreground: var(--white-main)
   }
 }
 
@@ -33,16 +45,13 @@ body {
   position: relative;
   overflow: hidden;
   background-color: #23212c;
-  /* Cor base do "osso" */
   border-radius: 8px;
-  /* Ajuste se quiser mais ou menos arredondado */
 }
 
 .skeleton::after {
   content: "";
   position: absolute;
   inset: 0;
-  /* substitui top/right/bottom/left: 0 */
   transform: translateX(-100%);
   background-image: linear-gradient(90deg,
       rgba(255, 255, 255, 0) 0,
@@ -70,15 +79,45 @@ body {
 .post-content h2 {
   font-size: 22px;
   margin: 16px 0;
+  color: var(--green-main);
+  font-weight: 500;
+}
+
+.post-content h3 {
+  font-size: 18px;
+  margin: 16px 0;
+  color: var(--green-main);
+  font-weight: 500;
 }
 
 .post-content p {
   margin: 24px 0;
 }
 
+.post-content strong {
+  background-color:  var(--background-light);
+  border-radius: 4px;
+  padding: 4px 8px;
+}
+
 @media(min-width: 1024px) {
   .post-content h2 {
-    font-size: 26px;
+    font-size: 32px;
     margin: 20px 0;
   }
+
+  .post-content h3 {
+    font-size: 26px;
+    margin: 16px 0;
+  }
+}
+
+.post-content img {
+  margin: 24px 0;
+}
+
+.post-card .category-flag {
+  width: 82px;
+  font-size: 12px !important;
+  margin-top: 10px;
 }

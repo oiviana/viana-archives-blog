@@ -20,14 +20,14 @@ export default function CodeBlock({ code, language = "plaintext", theme = "dark"
     try {
       await navigator.clipboard.writeText(code);
       setCopied(true);
-      setTimeout(() => setCopied(false), 2000); // volta após 2s
+      setTimeout(() => setCopied(false), 2000); 
     } catch (err) {
       console.error("Erro ao copiar:", err);
     }
   };
 
   return (
-    <div className="my-4 border rounded-lg overflow-hidden border-red-500">
+    <div className="my-4 border rounded-lg overflow-hidden border-background-extralight">
       <div className="flex justify-between items-center bg-gray-100 dark:bg-gray-800 px-3 py-2">
         <span className="text-base font-mono text-gray-600 dark:text-gray-300">
           {language}
