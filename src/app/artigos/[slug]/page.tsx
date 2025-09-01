@@ -23,7 +23,7 @@ export default async function PostPage({ params }: PostPageProps) {
     return (
         <>
         <Header/>
-        <div className="prose lg:prose-xl max-w-[850px] mx-auto py-10 pt-6">
+        <div className="prose lg:prose-xl max-w-[850px] mx-auto py-10 pt-[5.2rem]">
 
             <Link href="/" className="flex items-center gap-3 my-3 font-bitter text-base lg:text-lg hover:text-green-main transition-colors">
                 <IoArrowBack />
