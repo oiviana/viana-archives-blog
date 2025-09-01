@@ -14,7 +14,7 @@ interface PostCardProps {
 
 export default function PostCard({ postTitle, slug, thumbnail, postDescription, postCategory, readingTime }: PostCardProps) {
     return (
-        <Link className="bg-[#23212c] rounded w-full max-w-[320px] h-[380px] p-2 flex flex-col justify-start post-card"
+        <Link className="bg-[#23212c] rounded w-full max-w-[320px] h-[380px] p-2 flex flex-col justify-start post-card shadow"
             href={`/artigos/${slug}`}
         >
             <div className="overflow-hidden max-h-[180px]">
@@ -23,13 +23,14 @@ export default function PostCard({ postTitle, slug, thumbnail, postDescription, 
                     width={305}
                     height={180}
                     alt={postTitle}
-                    objectFit="cover"
+                    loading="eager"
+                    className="object-cover"
                 />
             </div>
             <div className="flex flex-col">
                 <CategoryFlag category={postCategory}/>
-                <span className="text-white-secondary font-lora text-sm my-1.5">tempo de leitura: {readingTime} minutos</span>
-                <h2 className="text-lg lg:text-xl my-2.5 font-raleway">{postTitle}</h2>
+                <span className="text-white-secondary font-lora text-sm my-2">Tempo de leitura: {readingTime} minutos</span>
+                <h2 className="text-lg lg:text-xl my-2.5 font-raleway text-green-main">{postTitle}</h2>
                 <h3 className="font-lora">{postDescription}</h3>
             </div>
         </Link>

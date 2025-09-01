@@ -9,7 +9,8 @@ interface FlagProps extends CategoryFlagProps {
 
 function Flag ({category, foreground, background}:FlagProps) {
     return(
-        <span className={`category-flag flex justify-center items-center min-w-20 text-base font-jetbrains py-1 px-3 rounded-xl  border-1 text-${foreground} border-${foreground} ${background}`} >
+        <span className={`category-flag flex justify-center items-center min-w-20 text-base font-jetbrains py-1 px-3 rounded-xl  border-1 text-[${foreground}] border-[${foreground}] ${background}`} 
+         style={{ color: foreground, borderColor: foreground , background: background}}>
             {category}
             </span>
     )
@@ -18,11 +19,11 @@ function Flag ({category, foreground, background}:FlagProps) {
 export default function CategoryFlag({ category }: CategoryFlagProps) {
   switch (category) {
     case "Codes":
-      return <Flag category={category} foreground={"[#63a0cf]"} background={"bg-[#2F6B9A]"}/>
+      return <Flag category={category} foreground={"#d8e7f3"} background={"#2F6B9A"}/>
     case "IA":
-      return <Flag category={category} foreground={"[#FEEED5]"}  background={"bg-[#c38a55]"}/>
+      return <Flag category={category} foreground={"#0d0d0d"}  background={"#b3b3b3"}/>
       case "Carreira":
-        return <Flag category={category} foreground={"[#FEEED5]"}  background={"bg-[#c38a55]"}/>
+        return <Flag category={category} foreground={"#fef5e6"}  background={"#976435"}/>
     default:
       return <span>Sem categoria</span>
   }

@@ -5,7 +5,11 @@ export default function Skeleton({ skeletonType }: SkeletonProps) {
   return (
     <>
       {skeletonType === "grid-cards" && (
-        <div className="skeleton h-16"> skeleton grid </div>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 items-center justify-items-center gap-6 w-full max-w-5xl mx-auto  mt-4 lg:mt-14"> 
+        <div className="rounded w-full max-w-[320px] h-[380px] skeleton"></div>
+        <div className="rounded w-full max-w-[320px] h-[380px] skeleton"></div>
+        <div className="rounded w-full max-w-[320px] h-[380px] skeleton"></div>
+        </div>
       )}
 
       {skeletonType === "page-content" && (

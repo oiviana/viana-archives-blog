@@ -2,6 +2,7 @@
 
 :root {
   --background: #141217;
+  --background-bold: #18161d;
   --background-light: #23212C;
   --background-extra-light: #5d5874;
   --white-main: #f2f2f2;
@@ -11,6 +12,7 @@
 
 @theme inline {
   --color-background: var(--background);
+  --color-background-bold: var(--background-bold);
   --color-background-light: var(--background-light);
   --color-background-extralight: var(--background-extra-light);
   --color-white-main: var(--white-main);

@@ -6,6 +6,7 @@ export async function getPostBySlug(slug: string) {
       postTitle,
       postDescription,
       postDate,
+      updatedPostDate,
       postCategory,
       authorName,
       authorImage,
