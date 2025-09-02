@@ -5,7 +5,7 @@ export default function Header() {
 
     return (
         <header className="bg-background-bold/80 fixed z-50 w-full h-14 lg:h-[70px] shadow-lg  backdrop-blur-lg">
-            <div className="w-full h-full max-w-5xl mx-auto flex justify-between items-center px-3 lg:px-0">
+            <div className="w-full h-full max-w-5xl mx-auto flex justify-between items-center px-3.5 lg:px-0">
                 <span>Logo</span>
                 <nav>
                     <ul className="flex gap-8 lg:gap-12">
@@ -21,8 +21,8 @@ export default function Header() {
                                 className="font-jetbrains hover:text-green-main transition-colors"
                             >
                                 <FaLinkedin
-                                    className="text-white-main "
-                                    size={18}
+                                    className="text-white-main mt-1"
+                                    size={22}
                                 />
                             </Link>
                         </li>
