@@ -8,6 +8,7 @@ import { IoArrowBack } from "react-icons/io5";
 import CategoryFlag from "@/components/CategoryFlag";
 import Header from "@/components/Header";
 import type { Metadata } from "next";
+import { formatOgImage } from "@/utils/formatOgImage";
 
 type PostPageProps = {
   params: Promise<{ slug: string }>;
@@ -58,7 +59,7 @@ export async function generateMetadata(
       siteName: "Viana Archives",
       images: [
         {
-          url: generateImageUrl(post.thumbnailImage),
+          url: formatOgImage(post.thumbnailImage),
           width: 1200,
           height: 630,
           alt: post.postTitle,
