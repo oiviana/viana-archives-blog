@@ -1,8 +1,11 @@
+import  Providers  from "@/app/providers";
 import Main from "./Main";
 
 
 export default function Home() {
   return (
-    <Main/>
+    <Providers>
+      <Main />
+    </Providers>
   )
 }
