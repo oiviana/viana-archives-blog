@@ -58,6 +58,7 @@ className={`text-sm border-1 px-2 py-1 min-w-[93px] rounded transition cursor-po
         language={language}
         style={theme === "dark" ? oneDark : oneLight}
         customStyle={{ margin: 0, padding: "1em", borderTopLeftRadius: 0, borderTopRightRadius:0 }}
+        className="text-sm lg:text-lg"
       >
         {code}
       </SyntaxHighlighter>
