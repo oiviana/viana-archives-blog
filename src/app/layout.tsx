@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import {  Lora, JetBrains_Mono, Bitter, Playfair_Display, Oswald, Raleway } from "next/font/google";
+import { Lora, JetBrains_Mono, Bitter, Playfair_Display, Oswald, Raleway } from "next/font/google";
 import "./globals.css";
 
 
@@ -36,6 +36,9 @@ const raleway = Raleway({
 export const metadata: Metadata = {
   title: "Home | Viana Archives",
   description: "Desenvolvedor full-stack",
+  openGraph: {
+    description: "Desenvolvedor full-stack",
+  }
 };
 
 export default function RootLayout({
