@@ -9,7 +9,7 @@ interface FlagProps extends CategoryFlagProps {
 
 function Flag ({category, foreground, background}:FlagProps) {
     return(
-        <span className={`category-flag flex justify-center items-center min-w-20 text-base font-jetbrains py-1 px-3 rounded-xl  border-1 text-[${foreground}] border-[${foreground}] ${background}`} 
+        <span className={`category-flag flex justify-center items-center min-w-20 text-sm lg:text-base font-jetbrains py-1 px-2 lg:px-3 rounded-xl  border-1 text-[${foreground}] border-[${foreground}] ${background}`} 
          style={{ color: foreground, borderColor: foreground , background: background}}>
             {category}
             </span>

@@ -13,7 +13,7 @@ export default function Skeleton({ skeletonType }: SkeletonProps) {
       )}
 
       {skeletonType === "page-content" && (
-        <div className="flex flex-col w-full max-w-[850px] mx-auto mt-32">
+        <div className="flex flex-col w-full max-w-[850px] mx-auto pt-32 px-3.5 lg:px-0">
           <div className="skeleton h-[450px] mb-5"></div>
           <div className="flex gap-4 mb-4">
             <div className="h-14 w-14 !rounded-[40px] skeleton"></div>
