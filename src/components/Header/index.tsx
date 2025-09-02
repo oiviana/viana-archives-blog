@@ -21,7 +21,7 @@ export default function Header() {
                                 className="font-jetbrains hover:text-green-main transition-colors"
                             >
                                 <FaLinkedin
-                                    className="text-white-main mt-1"
+                                    className="text-white-main mt-0.5"
                                     size={22}
                                 />
                             </Link>
