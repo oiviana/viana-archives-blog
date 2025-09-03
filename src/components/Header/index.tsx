@@ -10,7 +10,7 @@ export default function Header() {
                 <Link
                     href={"/"}>
                     <Image
-                        src={"/logo.png"}
+                        src={"/logo2.png"}
                         width={90}
                         height={50}
                         className="w-[65px] h-auto lg:w-[90px]"
