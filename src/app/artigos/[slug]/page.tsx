@@ -129,7 +129,7 @@ export default async function PostPage({ params }: PostPageProps) {
           </div>
         </div>
 
-        <div className="flex items-center gap-4">
+        <div className="flex items-center gap-2 lg:gap-4">
           <Image
             src={generateImageUrl(post.authorImage)}
             width={56}
@@ -144,7 +144,7 @@ export default async function PostPage({ params }: PostPageProps) {
                 {post.authorName}
               </span>
             </div>
-            <span className="text-white-secondary ml-1.5 font-lora border-l border-transparent lg:border-background-extralight pl-3">
+            <span className="text-white-secondary ml-1.5 font-lora border-l border-transparent lg:border-background-extralight pl-2 lg:pl-3">
               {post.readingTime} minutos de leitura.
             </span>
           </div>
