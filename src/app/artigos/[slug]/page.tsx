@@ -31,7 +31,7 @@ export async function generateMetadata(
         siteName: "Meu Blog",
         images: [
           {
-            url: "https://meublog.com/default-og.png", 
+            url: "https://meublog.com/default-og.png",
             width: 1200,
             height: 630,
             alt: "Imagem padrão do Meu Blog",
@@ -68,7 +68,7 @@ export async function generateMetadata(
       locale: "pt_BR",
       type: "article",
       publishedTime: post.postDate,
-      authors: ["Lucas Viana"], 
+      authors: ["Lucas Viana"],
     },
     twitter: {
       card: "summary_large_image",
@@ -105,6 +105,9 @@ export default async function PostPage({ params }: PostPageProps) {
             src={generateImageUrl(post.thumbnailImage)}
             width={850}
             height={180}
+            sizes="(max-width: 768px) 100vw, 
+               (max-width: 1200px) 50vw, 
+               850px"
             alt={post.postTitle}
             className="border-4 border-[#141217] rounded-2xl object-contain"
             priority={true}
