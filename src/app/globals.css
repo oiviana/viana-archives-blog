@@ -95,10 +95,11 @@ body {
 .post-content p {
   margin: 24px 0;
   color: var(--color-white-main);
+  line-height: 32px;
 }
 
 .post-content strong {
-  background-color:  var(--background-light);
+  background-color: var(--background-light);
   border-radius: 4px;
   padding: 4px 8px;
 }
@@ -113,6 +114,10 @@ body {
     font-size: 26px;
     margin: 16px 0;
   }
+
+  .post-content p {
+    line-height: 36px;
+  }
 }
 
 .post-content img {
@@ -123,7 +128,7 @@ body {
   width: 82px;
   font-size: 12px !important;
   margin-top: 10px;
-  position: absolute; 
+  position: absolute;
   right: 10px;
   top: 1%;
 }
