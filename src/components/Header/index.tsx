@@ -40,7 +40,7 @@ export default function Header() {
                         </li>
                         <li className="hidden lg:flex">
                             <Link href={"https://www.linkedin.com/in/lucasviana80/"}
-                                className="font-jetbrains hover:text-green-main transition-colors"
+                                className="font-jetbrains text-white-main hover:text-green-main transition-colors"
                             >
                                 Linkedin
                             </Link>
