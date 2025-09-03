@@ -16,9 +16,11 @@ const components: PortableTextComponents = {
         alt={value.alt || ""}
         width={850}
         height={600}
-        sizes="(max-width: 768px) 100vw, 
-               (max-width: 1200px) 50vw, 
-               850px"
+        sizes="(max-width: 480px) 360px,
+         (max-width: 768px) 480px,
+         (max-width: 1024px) 600px,
+         (max-width: 1280px) 768px,
+         850px"
         className="my-4 rounded"
         loading="lazy"
       />

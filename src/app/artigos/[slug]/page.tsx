@@ -105,9 +105,11 @@ export default async function PostPage({ params }: PostPageProps) {
             src={generateImageUrl(post.thumbnailImage)}
             width={850}
             height={180}
-            sizes="(max-width: 768px) 100vw, 
-               (max-width: 1200px) 50vw, 
-               850px"
+            sizes="(max-width: 480px) 360px,
+         (max-width: 768px) 480px,
+         (max-width: 1024px) 600px,
+         (max-width: 1280px) 768px,
+         850px"
             alt={post.postTitle}
             className="border-4 border-[#141217] rounded-2xl object-contain"
             priority
