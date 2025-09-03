@@ -94,7 +94,7 @@ export default async function PostPage({ params }: PostPageProps) {
       <div className="prose lg:prose-xl max-w-[850px] mx-auto py-10 pt-[5.2rem] px-3.5 lg:px-0">
         <Link
           href="/"
-          className="flex items-center gap-3 my-3 font-bitter text-base lg:text-lg hover:text-green-main transition-colors"
+          className="flex items-center gap-3 my-3 font-bitter text-base lg:text-lg text-white-main hover:text-green-main transition-colors"
         >
           <IoArrowBack />
           Voltar
@@ -139,7 +139,7 @@ export default async function PostPage({ params }: PostPageProps) {
           />
           <div className="flex flex-col lg:flex-row gap-2 items-center">
             <div>
-              <span className="text-base lg:text-lg font-lora">Autor: </span>{" "}
+              <span className="text-base lg:text-lg font-lora text-white-main">Autor: </span>{" "}
               <span className="text-white-secondary text-base lg:text-lg font-lora">
                 {post.authorName}
               </span>

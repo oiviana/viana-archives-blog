@@ -21,7 +21,7 @@ export default function Header() {
                     <ul className="flex gap-8 lg:gap-12">
                         <li>
                             <Link href={"https://oiviana.vercel.app/"}
-                                className="font-jetbrains hover:text-green-main transition-colors"
+                                className="font-jetbrains text-white-main hover:text-green-main transition-colors"
                             >
                                 Sobre mim
                             </Link>
@@ -29,7 +29,8 @@ export default function Header() {
                         <li className="flex lg:hidden">
                             <Link href={"https://www.linkedin.com/in/lucasviana80/"}
 
-                                className="font-jetbrains hover:text-green-main transition-colors"
+                                className="font-jetbrains text-white-main hover:text-green-main transition-colors"
+                                aria-label="Acesse meu linkedin"
                             >
                                 <FaLinkedin
                                     className="text-white-main mt-0.5"

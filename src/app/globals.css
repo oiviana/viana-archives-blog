@@ -7,7 +7,7 @@
   --background-extra-light: #5d5874;
   --white-main: #f2f2f2;
   --white-secondary: #c7c5d3;
-  --green-main: #89d83a;
+  --green-main: #61de46;
 }
 
 @theme inline {
@@ -94,6 +94,7 @@ body {
 
 .post-content p {
   margin: 24px 0;
+  color: var(--color-white-main);
 }
 
 .post-content strong {
