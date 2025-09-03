@@ -110,7 +110,8 @@ export default async function PostPage({ params }: PostPageProps) {
                850px"
             alt={post.postTitle}
             className="border-4 border-[#141217] rounded-2xl object-contain"
-            priority={true}
+            priority
+            fetchPriority="high"
             loading="eager"
           />
           <div className="absolute bg-gradient-to-t from-[#141217] from-35% to-transparent w-full bottom-5 lg:bottom-0 p-2 lg:px-4 rounded-b-2xl">
