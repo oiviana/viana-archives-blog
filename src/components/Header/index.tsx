@@ -13,7 +13,7 @@ export default function Header() {
                         src={"/logo2.png"}
                         width={90}
                         height={50}
-                        className="w-[65px] h-auto lg:w-[90px]"
+                        className="w-[65px] h-auto lg:w-[85px]"
                         alt="Logo do site"
                     />
                 </Link>
