@@ -116,7 +116,7 @@ export default async function PostPage({ params }: PostPageProps) {
             fetchPriority="high"
             loading="eager"
           />
-          <div className="absolute bg-gradient-to-t from-[#141217] from-35% to-transparent w-full bottom-5 lg:bottom-0 p-2 lg:px-4 rounded-b-2xl">
+          <div className="absolute bg-gradient-to-t from-[#141217] from-35% to-transparent w-full bottom-5 sm:bottom-0 lg:bottom-0 p-2 lg:px-4 rounded-b-2xl">
             <h1 className="text-lg lg:text-[3rem] mb-3 font-raleway font-semibold text-white-main">
               {post.postTitle}
             </h1>

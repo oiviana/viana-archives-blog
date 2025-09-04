@@ -8,7 +8,8 @@ export default function Header() {
         <header className="bg-background-bold/80 fixed z-50 w-full h-16 lg:h-[80px] shadow-lg  backdrop-blur-lg">
             <div className="w-full h-full max-w-5xl mx-auto flex justify-between items-center px-3.5 lg:px-0">
                 <Link
-                    href={"/"}>
+                    href={"/"}
+                    className="flex items-center gap-2">
                     <Image
                         src={"/logo2.png"}
                         width={90}
@@ -16,6 +17,7 @@ export default function Header() {
                         className="w-[65px] h-auto lg:w-[85px]"
                         alt="Logo do site"
                     />
+                    <span className="font-jetbrains italic logo-text-gradient font-semibold hidden lg:flex text-2xl">Viana Archives</span>
                 </Link>
                 <nav>
                     <ul className="flex gap-8 lg:gap-12">
