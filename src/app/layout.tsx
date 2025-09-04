@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Lora, JetBrains_Mono, Bitter, Playfair_Display, Oswald, Raleway } from "next/font/google";
 import "./globals.css";
+import { formatOgImage } from "@/utils/formatOgImage";
 
 
 const lora = Lora({
@@ -38,6 +39,14 @@ export const metadata: Metadata = {
   description: "Desenvolvedor full-stack",
   openGraph: {
     description: "Desenvolvedor full-stack",
+    images: [
+      {
+        url: "/embed-template.png",
+        width: 1200,
+        height: 630,
+        alt: "imagem descritiva do site",
+      },
+    ],
   },
   icons: {
     icon: [
