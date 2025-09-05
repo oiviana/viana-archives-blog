@@ -124,6 +124,11 @@ body {
   margin: 24px 0;
 }
 
+.post-content a {
+  color: var(--green-main);
+  text-decoration: underline;
+}
+
 .post-card .category-flag {
   min-width: 82px;
   font-size: 12px !important;
