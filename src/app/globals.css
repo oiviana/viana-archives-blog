@@ -125,7 +125,7 @@ body {
 }
 
 .post-card .category-flag {
-  width: 82px;
+  min-width: 82px;
   font-size: 12px !important;
   margin-top: 10px;
   position: absolute;
