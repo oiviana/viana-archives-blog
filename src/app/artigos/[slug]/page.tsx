@@ -1,5 +1,5 @@
-import { getPostBySlug } from "../../../utils/sanity/getPostBySlug";
-import { BlogPostContent } from "../../../components/PostContent";
+import { getPostBySlug } from "@/utils/sanity/getPostBySlug";
+import { BlogPostContent } from "@/components/PostContent";
 import { BlogPostProps } from "@/types/post";
 import Image from "next/image";
 import { generateImageUrl } from "@/utils/sanity/sanityImageBuilder";

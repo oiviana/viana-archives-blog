@@ -1,6 +1,6 @@
 import Header from "@/components/Header";
 import Skeleton from "@/components/Skeleton";
-import PostsGrid from "../components/PostGrid"
+import PostsGrid from "@/components/PostGrid";
 import { Suspense } from "react";
 
 export default function Main() {

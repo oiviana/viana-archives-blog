@@ -1,9 +1,9 @@
-import { PortableText, PortableTextComponents } from "@portabletext/react"
-import type { PortableTextBlock } from "@portabletext/types"
-import Image from "next/image"
-import { CodeBlockType, ImageBlock } from "@/types/post-content"
-import { generateImageUrl } from "@/utils/sanity/sanityImageBuilder"
-import CodeBlock from "../CodeBlock.tsx"
+import { PortableText, PortableTextComponents } from "@portabletext/react";
+import type { PortableTextBlock } from "@portabletext/types";
+import Image from "next/image";
+import { CodeBlockType, ImageBlock } from "@/types/post-content";
+import { generateImageUrl } from "@/utils/sanity/sanityImageBuilder";
+import CodeBlock from "@/components/CodeBlock.tsx";
 
 const components: PortableTextComponents = {
   types: {

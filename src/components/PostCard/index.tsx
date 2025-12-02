@@ -1,6 +1,6 @@
 import Link from "next/link"
 import Image from "next/image"
-import CategoryFlag from "../CategoryFlag"
+import CategoryFlag from "@/components/CategoryFlag"
 
 interface PostCardProps {
     postTitle: string
