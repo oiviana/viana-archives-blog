@@ -100,7 +100,7 @@ export default async function PostPage({ params }: PostPageProps) {
           Voltar
         </Link>
 
-        <div className="relative rounded-2xl overflow-hidden h-[260px] lg:h-[476px]">
+        <div className="relative  overflow-hidden h-[260px] lg:h-[476px]">
           <Image
             src={generateImageUrl(post.thumbnailImage)}
             width={850}
@@ -111,12 +111,12 @@ export default async function PostPage({ params }: PostPageProps) {
          (max-width: 1280px) 768px,
          850px"
             alt={post.postTitle}
-            className="border-4 border-[#141217] rounded-2xl object-contain"
+            className="border-4 border-[#141217] rounded-3xl object-contain"
             priority
             fetchPriority="high"
             loading="eager"
           />
-          <div className="absolute bg-gradient-to-t from-[#141217] from-35% to-transparent w-full bottom-5 sm:bottom-0 lg:bottom-0 p-2 lg:px-4 rounded-b-2xl">
+          <div className="absolute bg-gradient-to-t from-[#141217] from-35% to-transparent w-full bottom-12 min-[407px]:bottom-7 min-[440px]:bottom-5 min-[450px]:bottom-0  sm:bottom-0 lg:bottom-0 p-2 lg:px-4 ">
             <h1 className="text-lg lg:text-[3rem] mb-3 font-raleway font-semibold text-white-main">
               {post.postTitle}
             </h1>
