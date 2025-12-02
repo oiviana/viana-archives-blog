@@ -27,6 +27,6 @@ export default function CategoryFlag({ category }: CategoryFlagProps) {
     case "Carreira":
       return <Flag category={category} foreground={"#fef5e6"} background={"#976435"} />
     default:
-      return <span>Sem categoria</span>
+      return null
   }
 }
