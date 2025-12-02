@@ -50,7 +50,7 @@ export async function generateMetadata(
   }
 
   return {
-    title: `${post.postTitle} |  Viana Archives`,
+    title: post.postTitle,
     description: post.postDescription,
     openGraph: {
       title: post.postTitle,

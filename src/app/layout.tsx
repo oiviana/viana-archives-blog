@@ -35,7 +35,10 @@ const raleway = Raleway({
 });
 
 export const metadata: Metadata = {
-  title: "Home | Viana Archives",
+  title: {
+    default: "Viana Archives",
+    template: "%s | Viana Archives",
+  },
   description: "Desenvolvedor full-stack",
   openGraph: {
     description: "Desenvolvedor full-stack",
