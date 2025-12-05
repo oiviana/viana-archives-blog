@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { FaLinkedin } from "react-icons/fa";
-import Image from "next/image"
+import { Logo } from "../Logo";
 
 export default function Header() {
 
@@ -10,13 +10,7 @@ export default function Header() {
                 <Link
                     href={"/"}
                     className="flex items-center gap-2">
-                    <Image
-                        src={"/logo2.png"}
-                        width={90}
-                        height={50}
-                        className="w-[65px] h-auto lg:w-[85px]"
-                        alt="Logo do site"
-                    />
+                        <Logo className="w-18 lg:w-[90px]" />
                     <span className="font-jetbrains italic logo-text-gradient font-semibold hidden lg:flex text-2xl">Viana Archives</span>
                 </Link>
                 <nav>
