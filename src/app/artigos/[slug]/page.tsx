@@ -11,6 +11,7 @@ import type { Metadata } from "next";
 import { formatOgImage } from "@/utils/formatOgImage";
 import TableOfContents from "@/components/TableOfContents";
 import { getPostHeadings } from "@/utils/getPostHeadings";
+import { notFound } from "next/navigation";
 
 type PostPageProps = {
   params: Promise<{ slug: string }>;
@@ -87,7 +88,7 @@ export default async function PostPage({ params }: PostPageProps) {
   const post: BlogPostProps = await getPostBySlug(slug);
 
   if (!post) {
-    return <div>Post não encontrado</div>;
+    notFound();
   }
 
   const headings = getPostHeadings(post.postContent);

@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import { Lora, JetBrains_Mono, Bitter, Playfair_Display, Oswald, Raleway } from "next/font/google";
 import "./globals.css";
 
+const siteUrl = process.env.NEXT_PUBLIC_SITE_URL ?? "https://viana-archives-blog.vercel.app";
+
 
 const lora = Lora({
   variable: "--font-lora",
@@ -34,6 +36,7 @@ const raleway = Raleway({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL(siteUrl),
   title: {
     default: "Viana Archives",
     template: "%s | Viana Archives",
