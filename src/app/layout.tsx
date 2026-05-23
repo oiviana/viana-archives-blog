@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import { Lora, JetBrains_Mono, Bitter, Playfair_Display, Oswald, Raleway } from "next/font/google";
 import "./globals.css";
-import { formatOgImage } from "@/utils/formatOgImage";
 
 
 const lora = Lora({
@@ -61,7 +60,6 @@ export const metadata: Metadata = {
     shortcut: "/favicon.ico",
   },
   manifest: "/site.webmanifest",
-
 };
 
 export default function RootLayout({

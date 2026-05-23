@@ -4,8 +4,26 @@ import Image from "next/image";
 import { CodeBlockType, ImageBlock } from "@/types/post-content";
 import { generateImageUrl } from "@/utils/sanity/sanityImageBuilder";
 import CodeBlock from "@/components/CodeBlock.tsx";
+import { getHeadingId } from "@/utils/getPostHeadings";
 
 const components: PortableTextComponents = {
+  block: {
+    h1: ({ children, value }) => (
+      <h1 id={getHeadingId(value)} className="scroll-mt-24">
+        {children}
+      </h1>
+    ),
+    h2: ({ children, value }) => (
+      <h2 id={getHeadingId(value)} className="scroll-mt-24">
+        {children}
+      </h2>
+    ),
+    h3: ({ children, value }) => (
+      <h3 id={getHeadingId(value)} className="scroll-mt-24">
+        {children}
+      </h3>
+    ),
+  },
   types: {
     code: ({ value }: { value: CodeBlockType }) => (
       <CodeBlock code={value.code} language={value.language} />

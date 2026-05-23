@@ -78,6 +78,13 @@ body {
   mask-size: cover;
 }
 
+.post-content h1 {
+  font-size: 26px;
+  margin: 20px 0;
+  color: var(--green-main);
+  font-weight: 500;
+}
+
 .post-content h2 {
   font-size: 22px;
   margin: 16px 0;
@@ -105,6 +112,11 @@ body {
 }
 
 @media(min-width: 1024px) {
+  .post-content h1 {
+    font-size: 38px;
+    margin: 24px 0;
+  }
+
   .post-content h2 {
     font-size: 32px;
     margin: 20px 0;

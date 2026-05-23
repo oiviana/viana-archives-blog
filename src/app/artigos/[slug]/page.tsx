@@ -9,6 +9,8 @@ import CategoryFlag from "@/components/CategoryFlag";
 import Header from "@/components/Header";
 import type { Metadata } from "next";
 import { formatOgImage } from "@/utils/formatOgImage";
+import TableOfContents from "@/components/TableOfContents";
+import { getPostHeadings } from "@/utils/getPostHeadings";
 
 type PostPageProps = {
   params: Promise<{ slug: string }>;
@@ -59,7 +61,7 @@ export async function generateMetadata(
       siteName: "Viana Archives",
       images: [
         {
-          url: formatOgImage(post.thumbnailImage),
+          url: formatOgImage(post.thumbnailImage.asset),
           width: 1200,
           height: 630,
           alt: post.postTitle,
@@ -74,7 +76,7 @@ export async function generateMetadata(
       card: "summary_large_image",
       title: post.postTitle,
       description: post.postDescription,
-      images: [generateImageUrl(post.thumbnailImage)],
+      images: [generateImageUrl(post.thumbnailImage.asset)],
     },
   };
 }
@@ -87,6 +89,8 @@ export default async function PostPage({ params }: PostPageProps) {
   if (!post) {
     return <div>Post não encontrado</div>;
   }
+
+  const headings = getPostHeadings(post.postContent);
 
   return (
     <>
@@ -102,7 +106,7 @@ export default async function PostPage({ params }: PostPageProps) {
 
         <div className="relative  overflow-hidden h-[260px] lg:h-[476px]">
           <Image
-            src={generateImageUrl(post.thumbnailImage)}
+            src={generateImageUrl(post.thumbnailImage.asset)}
             width={850}
             height={180}
             sizes="(max-width: 480px) 360px,
@@ -131,7 +135,7 @@ export default async function PostPage({ params }: PostPageProps) {
 
         <div className="flex items-center gap-2 lg:gap-4">
           <Image
-            src={generateImageUrl(post.authorImage)}
+            src={generateImageUrl(post.authorImage.asset)}
             width={56}
             height={56}
             alt={post.postTitle}
@@ -171,6 +175,10 @@ export default async function PostPage({ params }: PostPageProps) {
               .
             </span>
           )}
+        </div>
+
+        <div className="mb-9 lg:mb-12">
+          <TableOfContents headings={headings} />
         </div>
 
         <article className="font-bitter leading-7 lg:leading-8 text-base lg:text-lg post-content">
