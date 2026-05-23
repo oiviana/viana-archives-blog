@@ -12,9 +12,9 @@ export default function TableOfContents({ headings }: TableOfContentsProps) {
   return (
     <nav
       aria-label="Indice do artigo"
-      className="rounded border border-background-extralight bg-background-light/50 p-4 font-bitter mb-8"
+      className="rounded border border-background-extralight bg-background-light/50 p-4 font-bitter mb-7"
     >
-      <span className="mb-3 block font-jetbrains text-sm font-semibold uppercase text-green-main">
+      <span className="mb-8 block font-jetbrains text-lg font-semibold uppercase text-green-main">
         Neste artigo
       </span>
       <ol className="flex flex-col gap-2">
