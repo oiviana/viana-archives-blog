@@ -14,24 +14,32 @@ interface PostCardProps {
 
 export default function PostCard({ postTitle, slug, thumbnail, postDescription, postCategory, readingTime }: PostCardProps) {
     return (
-        <Link className="bg-[#23212c] rounded w-full sm:max-w-[320px] h-[380px] p-2 flex flex-col justify-start post-card shadow relative border-2 border-transparent hover:border-green-main transition-all"
+        <Link className="bg-[#23212c] rounded w-full p-2 flex flex-col lg:flex-row gap-4 post-card shadow border-2 border-transparent hover:border-green-main transition-all"
             href={`/artigos/${slug}`}
         >
-            <div className="overflow-hidden h-[180px]">
+            <div className="relative overflow-hidden h-47.5 lg:h-55 lg:w-90 lg:min-w-90">
                 <Image
                     src={thumbnail}
-                    width={305}
-                    height={180}
+                    width={360}
+                    height={220}
                     alt={postTitle}
                     loading="eager"
                     className="object-cover h-full w-full"
                 />
             </div>
-            <div className="flex flex-col">
-                <CategoryFlag category={postCategory}/>
-                <span className="text-white-secondary font-lora text-sm my-2 mt-4">Tempo de leitura: {readingTime} minutos</span>
-                <h2 className="text-lg lg:text-xl my-2 font-jetbrains text-white-main font-semibold">{postTitle}</h2>
-                <h3 className="font-lora">{postDescription}</h3>
+            <div className="flex min-w-0 flex-1 flex-col justify-start p-2 lg:p-5">
+                <div className="mb-4 flex flex-wrap items-center gap-3">
+                    <CategoryFlag category={postCategory} />
+                    <span className="text-white-secondary font-lora text-sm lg:text-base">
+                        Tempo de leitura: {readingTime} minutos
+                    </span>
+                </div>
+                <h2 className="text-xl lg:text-2xl  my-2 font-jetbrains text-white-main font-semibold leading-snug">
+                    {postTitle}
+                </h2>
+                <p className="font-lora text-base lg:text-xl leading-7 text-white-main">
+                    {postDescription}
+                </p>
             </div>
         </Link>
     )

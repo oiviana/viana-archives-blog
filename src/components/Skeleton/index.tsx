@@ -5,10 +5,10 @@ export default function Skeleton({ skeletonType }: SkeletonProps) {
   return (
     <>
       {skeletonType === "grid-cards" && (
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 items-center justify-items-center gap-6 w-full max-w-5xl mx-auto  mt-12 lg:mt-14"> 
-        <div className="rounded w-full max-w-[320px] h-[380px] skeleton"></div>
-        <div className="rounded w-full max-w-[320px] h-[380px] skeleton"></div>
-        <div className="rounded w-full max-w-[320px] h-[380px] skeleton"></div>
+        <div className="flex w-full max-w-5xl flex-col gap-6 mx-auto mt-12 lg:mt-14">
+          <div className="rounded w-full h-[330px] lg:h-[240px] skeleton"></div>
+          <div className="rounded w-full h-[330px] lg:h-[240px] skeleton"></div>
+          <div className="rounded w-full h-[330px] lg:h-[240px] skeleton"></div>
         </div>
       )}
 
