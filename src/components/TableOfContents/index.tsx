@@ -9,21 +9,25 @@ export default function TableOfContents({ headings }: TableOfContentsProps) {
     return null
   }
 
+  const baseLevel = Math.min(...headings.map((heading) => heading.level))
+
   return (
     <nav
       aria-label="Indice do artigo"
       className="rounded border border-background-extralight bg-background-light/50 p-4 font-bitter mb-7"
     >
-      <span className="mb-8 block font-jetbrains text-lg font-semibold uppercase text-green-main">
+      <span className="mb-6 block font-jetbrains text-xl font-semibold uppercase text-green-main">
         Neste artigo
       </span>
       <ol className="flex flex-col gap-2">
         {headings.map((heading) => (
-          <li key={heading.id}>
+          <li key={heading.id} className={heading.level === baseLevel ? "mt-4 first:mt-0" : ""}>
             <a
               href={`#${heading.id}`}
-              className="block text-sm leading-5 text-white-secondary transition-colors hover:text-green-main"
-              style={{ paddingLeft: `${(heading.level - 1) * 12}px` }}
+              className={`block leading-5 text-white-secondary transition-colors hover:text-green-main ${
+                heading.level === baseLevel ? "text-lg" : "text-base"
+              }`}
+              style={{ paddingLeft: `${(heading.level - baseLevel) * 16}px` }}
             >
               {heading.text}
             </a>
