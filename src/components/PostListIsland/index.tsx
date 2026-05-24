@@ -2,6 +2,7 @@
 
 import PostCard from "@/components/PostCard"
 import { IoSearch } from "react-icons/io5"
+import { IoChevronDown } from "react-icons/io5"
 import { useMemo, useState } from "react"
 
 export type PostListItem = {
@@ -67,12 +68,12 @@ export default function PostListIsland({ posts }: PostListIslandProps) {
           />
         </label>
 
-        <label className="block w-full lg:max-w-64">
+        <label className="relative block w-full lg:max-w-64">
           <span className="sr-only">Filtrar por tema</span>
           <select
             value={category}
             onChange={(event) => setCategory(event.target.value)}
-            className="h-12 w-full rounded border border-background-extralight bg-background-light/70 px-4 font-jetbrains text-sm text-white-main outline-none transition-colors focus:border-green-main"
+            className="h-12 w-full appearance-none rounded border border-background-extralight bg-background-light/70 py-0 pl-4 pr-12 font-jetbrains text-sm text-white-main outline-none transition-colors focus:border-green-main cursor-pointer"
           >
             <option value="all">Todos os temas</option>
             {categories.map((categoryName) => (
@@ -81,6 +82,11 @@ export default function PostListIsland({ posts }: PostListIslandProps) {
               </option>
             ))}
           </select>
+          <IoChevronDown
+            aria-hidden="true"
+            className="pointer-events-none absolute right-5 top-1/2 -translate-y-1/2 text-white-main"
+            size={16}
+          />
         </label>
       </div>
 
