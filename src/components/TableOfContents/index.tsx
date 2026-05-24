@@ -21,7 +21,7 @@ export default function TableOfContents({ headings }: TableOfContentsProps) {
       </span>
       <ol className="flex flex-col gap-2">
         {headings.map((heading) => (
-          <li key={heading.id} className={heading.level === baseLevel ? "mt-4 first:mt-0" : ""}>
+          <li key={heading.id} className={heading.level === baseLevel ? "mt-3 mb-2 first:mt-0" : ""}>
             <a
               href={`#${heading.id}`}
               className={`block leading-5 text-white-secondary transition-colors hover:text-green-main ${

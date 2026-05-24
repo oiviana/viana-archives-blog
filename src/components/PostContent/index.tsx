@@ -23,6 +23,11 @@ const components: PortableTextComponents = {
         {children}
       </h3>
     ),
+    h4: ({ children, value }) => (
+      <h4 id={getHeadingId(value)} className="scroll-mt-24">
+        {children}
+      </h4>
+    ),
   },
   types: {
     code: ({ value }: { value: CodeBlockType }) => (

@@ -1,6 +1,6 @@
 import type { PortableTextBlock } from "@portabletext/types"
 
-type HeadingLevel = 1 | 2 | 3
+type HeadingLevel = 1 | 2 | 3 | 4
 
 type PortableTextChild = {
   text?: string
@@ -44,7 +44,7 @@ export function getHeadingId(block: HeadingBlock) {
 export function getPostHeadings(content: PortableTextBlock[]): PostHeading[] {
   return content
     .filter((block): block is HeadingBlock => {
-      return ["h1", "h2", "h3"].includes(String(block.style))
+      return ["h1", "h2", "h3", "h4"].includes(String(block.style))
     })
     .map((block) => {
       const text = getBlockText(block)
