@@ -12,6 +12,7 @@ import { formatOgImage } from "@/utils/formatOgImage";
 import TableOfContents from "@/components/TableOfContents";
 import { getPostHeadings } from "@/utils/getPostHeadings";
 import { notFound } from "next/navigation";
+import PostReferences from "@/components/PostReferences";
 
 type PostPageProps = {
   params: Promise<{ slug: string }>;
@@ -99,7 +100,7 @@ export default async function PostPage({ params }: PostPageProps) {
       <div className="prose lg:prose-xl max-w-[850px] mx-auto py-10 pt-[5.2rem] px-3.5 lg:px-0">
         <Link
           href="/"
-          className="flex items-center gap-3 my-3 font-bitter text-base lg:text-lg text-white-main hover:text-green-main transition-colors"
+          className="flex items-center gap-3 my-5 mt-8 font-bitter text-base lg:text-lg text-white-main hover:text-green-main transition-colors"
         >
           <IoArrowBack />
           Voltar
@@ -122,7 +123,7 @@ export default async function PostPage({ params }: PostPageProps) {
             loading="eager"
           />
           <div className="absolute bg-gradient-to-t from-[#141217] from-35% to-transparent w-full bottom-12 min-[407px]:bottom-7 min-[440px]:bottom-5 min-[450px]:bottom-0  sm:bottom-0 lg:bottom-0 p-2 lg:px-4 ">
-            <h1 className="text-lg lg:text-[3rem] mb-3 font-raleway font-semibold text-white-main">
+            <h1 className="text-xl lg:text-[3rem] mb-3 font-raleway font-semibold text-white-main">
               {post.postTitle}
             </h1>
             <article className="text-base lg:text-xl mb-3 font-bitter ">
@@ -185,6 +186,8 @@ export default async function PostPage({ params }: PostPageProps) {
         <article className="font-bitter leading-7 lg:leading-8 text-base lg:text-lg post-content">
           <BlogPostContent content={post.postContent} />
         </article>
+
+        <PostReferences references={post.references} />
       </div>
     </>
   );
