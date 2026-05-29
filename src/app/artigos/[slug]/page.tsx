@@ -126,7 +126,7 @@ export default async function PostPage({ params }: PostPageProps) {
             <h1 className="text-xl lg:text-[3rem] mb-3 font-raleway font-semibold text-white-main">
               {post.postTitle}
             </h1>
-            <article className="text-base lg:text-lg mb-3 font-bitter ">
+            <article className="text-base lg:text-xl mb-3 font-bitter ">
               {post.postDescription}
             </article>
           </div>

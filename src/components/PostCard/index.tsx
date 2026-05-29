@@ -37,7 +37,7 @@ export default function PostCard({ postTitle, slug, thumbnail, postDescription, 
                 <h2 className="text-xl lg:text-2xl  my-2 font-jetbrains text-white-main font-semibold leading-snug">
                     {postTitle}
                 </h2>
-                <p className="font-lora text-base lg:text-xl leading-7 text-white-main">
+                <p className="font-lora text-base lg:text-lg leading-7 text-white-main">
                     {postDescription}
                 </p>
             </div>
