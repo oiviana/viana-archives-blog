@@ -87,7 +87,7 @@ body {
 
 .post-content h2 {
   font-size: 22px;
-  margin: 16px 0;
+  margin: 36px 0 16px;
   color: var(--green-main);
   font-weight: 500;
 }
@@ -126,7 +126,7 @@ body {
 
   .post-content h2 {
     font-size: 32px;
-    margin: 20px 0;
+    margin: 36px 0 20px;
   }
 
   .post-content h3 {
