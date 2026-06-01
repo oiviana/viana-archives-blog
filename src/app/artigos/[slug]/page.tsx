@@ -106,7 +106,7 @@ export default async function PostPage({ params }: PostPageProps) {
           Voltar
         </Link>
 
-        <div className="relative  overflow-hidden h-[260px] lg:h-[476px]">
+        <div className="relative  overflow-hidden h-55 lg:h-[476px]">
           <Image
             src={generateImageUrl(post.thumbnailImage.asset)}
             width={850}
@@ -122,11 +122,11 @@ export default async function PostPage({ params }: PostPageProps) {
             fetchPriority="high"
             loading="eager"
           />
-          <div className="absolute bg-gradient-to-t from-[#141217] from-35% to-transparent w-full bottom-12 min-[407px]:bottom-7 min-[440px]:bottom-5 min-[450px]:bottom-0  sm:bottom-0 lg:bottom-0 p-2 lg:px-4 ">
+          <div className="absolute bg-linear-to-t from-[#141217] from-35% to-transparent w-full bottom-6 min-[400px]:bottom-1 min-[440px]:bottom-5 min-[450px]:bottom-0  sm:bottom-0 lg:bottom-0 p-2 lg:px-4 ">
             <h1 className="text-xl lg:text-[3rem] mb-3 font-raleway font-semibold text-white-main">
               {post.postTitle}
             </h1>
-            <article className="text-base lg:text-xl mb-3 font-bitter ">
+            <article className="text-sm lg:text-xl mb-3 font-bitter hidden lg:flex">
               {post.postDescription}
             </article>
           </div>
@@ -134,7 +134,9 @@ export default async function PostPage({ params }: PostPageProps) {
             <CategoryFlag category={post.postCategory} />
           </div>
         </div>
-
+        <article className="text-sm lg:text-xl mb-10 font-bitter flex lg:hidden">
+          {post.postDescription}
+        </article>
         <div className="flex items-center gap-2 lg:gap-4">
           <Image
             src={generateImageUrl(post.authorImage.asset)}
