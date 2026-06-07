@@ -9,7 +9,7 @@ type TableOfContentsProps = {
 }
 
 export default function TableOfContents({ headings }: TableOfContentsProps) {
-  const [isOpen, setIsOpen] = useState(true)
+  const [isOpen, setIsOpen] = useState(false)
 
   if (headings.length === 0) {
     return null
