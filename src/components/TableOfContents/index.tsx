@@ -16,7 +16,7 @@ export default function TableOfContents({ headings }: TableOfContentsProps) {
       aria-label="Indice do artigo"
       className="rounded border border-background-extralight bg-background-light/50 p-4 font-bitter mb-7"
     >
-      <span className="mb-6 block font-jetbrains text-xl font-semibold uppercase text-green-main">
+      <span className="mb-6 block font-jetbrains text-lg lg:text-xl font-semibold uppercase text-green-main">
         Neste artigo
       </span>
       <ol className="flex flex-col gap-2">
@@ -25,7 +25,7 @@ export default function TableOfContents({ headings }: TableOfContentsProps) {
             <a
               href={`#${heading.id}`}
               className={`block leading-5 text-white-secondary transition-colors hover:text-green-main ${
-                heading.level === baseLevel ? "text-lg" : "text-base"
+                heading.level === baseLevel ? "text-base lg:text-lg" : "text-sm lg:text-base"
               }`}
               style={{ paddingLeft: `${(heading.level - baseLevel) * 16}px` }}
             >

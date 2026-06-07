@@ -134,7 +134,7 @@ export default async function PostPage({ params }: PostPageProps) {
             <CategoryFlag category={post.postCategory} />
           </div>
         </div>
-        <article className="text-sm lg:text-xl mb-10 font-bitter flex lg:hidden">
+        <article className="text-[15px] lg:text-xl mb-10 font-bitter flex lg:hidden pl-1">
           {post.postDescription}
         </article>
         <div className="flex items-center gap-2 lg:gap-4">
