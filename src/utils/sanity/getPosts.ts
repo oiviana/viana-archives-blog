@@ -2,7 +2,7 @@ import { sanityClient } from '@/lib/sanityClient'
 
 export async function getPosts() {
   return sanityClient.fetch(
-    `*[_type == "blogPost"]{
+    `*[_type == "blogPost"] | order(postDate desc){
       postTitle,
       postDescription,
       slug,
