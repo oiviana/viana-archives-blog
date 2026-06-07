@@ -27,7 +27,7 @@ export default function CodeBlock({ code, language = "plaintext", theme = "dark"
   };
 
   return (
-    <div className="my-4 border rounded-lg overflow-hidden border-background-extralight">
+    <div className="my-4 border rounded-lg overflow-hidden border-background-extralight mb-8">
       <div className="flex justify-between items-center bg-gray-100 dark:bg-gray-800 px-3 py-2">
         <span className="text-base font-mono text-gray-600 dark:text-gray-300">
           {language}
