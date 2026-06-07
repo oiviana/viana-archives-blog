@@ -13,6 +13,7 @@ import TableOfContents from "@/components/TableOfContents";
 import { getPostHeadings } from "@/utils/getPostHeadings";
 import { notFound } from "next/navigation";
 import PostReferences from "@/components/PostReferences";
+import DocumentTitle from "@/components/DocumentTitle";
 
 type PostPageProps = {
   params: Promise<{ slug: string }>;
@@ -96,6 +97,7 @@ export default async function PostPage({ params }: PostPageProps) {
 
   return (
     <>
+      <DocumentTitle title={`${post.postTitle} | Viana Archives`} />
       <Header />
       <div className="prose lg:prose-xl max-w-[850px] mx-auto py-10 pt-[5.2rem] px-3.5 lg:px-0">
         <Link
