@@ -1,10 +1,11 @@
 import { PortableText, PortableTextComponents } from "@portabletext/react";
 import type { PortableTextBlock } from "@portabletext/types";
 import Image from "next/image";
-import { CodeBlockType, ImageBlock } from "@/types/post-content";
+import { CodeBlockType, ImageBlock, PostTableBlock } from "@/types/post-content";
 import { generateImageUrl } from "@/utils/sanity/sanityImageBuilder";
 import CodeBlock from "@/components/CodeBlock.tsx";
 import { getHeadingId } from "@/utils/getPostHeadings";
+import PostTable from "@/components/PostTable";
 
 const components: PortableTextComponents = {
   block: {
@@ -48,6 +49,7 @@ const components: PortableTextComponents = {
         loading="lazy"
       />
     ),
+    postTable: ({ value }: { value: PostTableBlock }) => <PostTable value={value} />,
   },
 }
 

@@ -12,3 +12,12 @@ export type ImageBlock = {
   }
   alt?: string
 }
+
+export type PostTableBlock = {
+  _type: "postTable"
+  caption?: string
+  rows?: Array<{
+    _key?: string
+    cells: string[]
+  }>
+}
