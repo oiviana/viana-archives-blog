@@ -125,6 +125,7 @@ export default async function PostPage({ params }: PostPageProps) {
             alt={post.postTitle}
             className="border-4 border-[#141217] rounded-3xl object-cover"
             priority
+            fetchPriority="high"
           />
           <div className="absolute bg-linear-to-t from-[#141217] from-35% to-transparent w-full bottom-6 min-[370px]:bottom-1 sm:bottom-0 lg:bottom-0 p-2 lg:px-4 ">
             <h1 className="text-xl lg:text-[3rem] mb-3 font-raleway font-semibold text-white-main">
