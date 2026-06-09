@@ -3,6 +3,7 @@ import { BlogPostContent } from "@/components/PostContent";
 import { BlogPostProps } from "@/types/post";
 import Image from "next/image";
 import { generateImageUrl } from "@/utils/sanity/sanityImageBuilder";
+import { generateImageSource } from "@/utils/sanity/sanityImageSource";
 import Link from "next/link";
 import { IoArrowBack } from "react-icons/io5";
 import CategoryFlag from "@/components/CategoryFlag";
@@ -95,6 +96,12 @@ export default async function PostPage({ params }: PostPageProps) {
   }
 
   const headings = getPostHeadings(post.postContent);
+  const heroImageUrl = generateImageSource(post.thumbnailImage.asset)
+    .width(1200)
+    .height(672)
+    .fit("crop")
+    .auto("format")
+    .url();
 
   return (
     <>
@@ -110,21 +117,14 @@ export default async function PostPage({ params }: PostPageProps) {
           Voltar
         </Link>
 
-        <div className="relative  overflow-hidden h-55 lg:h-[476px]">
+        <div className="relative overflow-hidden aspect-[16/10] lg:aspect-[850/476]">
           <Image
-            src={generateImageUrl(post.thumbnailImage.asset)}
-            width={850}
-            height={180}
-            sizes="(max-width: 480px) 360px,
-         (max-width: 768px) 480px,
-         (max-width: 1024px) 600px,
-         (max-width: 1280px) 768px,
-         850px"
+            src={heroImageUrl}
+            fill
+            sizes="(max-width: 850px) calc(100vw - 28px), 850px"
             alt={post.postTitle}
-            className="border-4 border-[#141217] rounded-3xl object-contain"
+            className="border-4 border-[#141217] rounded-3xl object-cover"
             priority
-            fetchPriority="high"
-            loading="eager"
           />
           <div className="absolute bg-linear-to-t from-[#141217] from-35% to-transparent w-full bottom-6 min-[370px]:bottom-1 sm:bottom-0 lg:bottom-0 p-2 lg:px-4 ">
             <h1 className="text-xl lg:text-[3rem] mb-3 font-raleway font-semibold text-white-main">
