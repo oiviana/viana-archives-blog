@@ -9,6 +9,7 @@ export default function Header() {
             <div className="w-full h-full max-w-5xl mx-auto flex justify-between items-center px-3.5 lg:px-0">
                 <Link
                     href={"/"}
+                    aria-label="Ir para a página principal do Viana Archives"
                     className="flex items-center gap-2">
                         <Logo className="w-18 lg:w-[90px]" />
                     <span className="font-jetbrains italic logo-text-gradient font-semibold hidden lg:flex text-2xl">Viana Archives</span>

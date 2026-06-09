@@ -8,12 +8,12 @@ export default function Main() {
     return (
         <>
             <Header />
-            <div className="min-h-screen p-4 pt-16 lg:pt-28 lg:p-8 pb-20 sm:p-20">
+            <main className="min-h-screen p-4 pt-16 lg:pt-28 lg:p-8 pb-20 sm:p-20">
                 <HomeHero />
                 <Suspense fallback={<Skeleton skeletonType="grid-cards" />}>
                     <PostsGrid />
                 </Suspense>
-            </div>
+            </main>
         </>
     )
 }

@@ -7,7 +7,9 @@ export default function Loading() {
     <>
       <DocumentTitle title="Viana Archives" />
       <Header />
-      <Skeleton skeletonType="page-content" />
+      <main>
+        <Skeleton skeletonType="page-content" />
+      </main>
     </>
   )
 }

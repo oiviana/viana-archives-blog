@@ -21,7 +21,7 @@ function Flag({ category, foreground, background }: FlagProps) {
 export default function CategoryFlag({ category }: CategoryFlagProps) {
   switch (category.toLowerCase()) {
     case "vtex":
-      return <Flag category={category} foreground="#fee7f0" background="#F30E6D" />
+      return <Flag category={category} foreground="#fee7f0" background="#db0a61" />
     case "codes":
       return <Flag category={category} foreground="#d8e7f3" background="#2F6B9A" />
     case "react native":
