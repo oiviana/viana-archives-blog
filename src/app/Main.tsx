@@ -2,6 +2,7 @@ import Header from "@/components/Header";
 import HomeHero from "@/components/HomeHero";
 import Skeleton from "@/components/Skeleton";
 import PostsGrid from "@/components/PostGrid";
+import Footer from "@/components/Footer";
 import { Suspense } from "react";
 
 export default function Main() {
@@ -13,6 +14,7 @@ export default function Main() {
                 <Suspense fallback={<Skeleton skeletonType="grid-cards" />}>
                     <PostsGrid />
                 </Suspense>
+                <Footer />
             </main>
         </>
     )

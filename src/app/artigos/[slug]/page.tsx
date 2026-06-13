@@ -16,6 +16,7 @@ import { notFound } from "next/navigation";
 import PostReferences from "@/components/PostReferences";
 import DocumentTitle from "@/components/DocumentTitle";
 import ScrollToTopButton from "@/components/ScrollToTopButton";
+import Footer from "@/components/Footer";
 
 type PostPageProps = {
   params: Promise<{ slug: string }>;
@@ -195,6 +196,8 @@ export default async function PostPage({ params }: PostPageProps) {
         </article>
 
         <PostReferences references={post.references} />
+
+        <Footer />
       </main>
     </>
   );
