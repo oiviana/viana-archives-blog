@@ -35,19 +35,26 @@ const components: PortableTextComponents = {
       <CodeBlock code={value.code} language={value.language} />
     ),
     image: ({ value }: { value: ImageBlock }) => (
-      <Image
-        src={generateImageUrl(value.asset)}
-        alt={value.alt || ""}
-        width={850}
-        height={600}
-        sizes="(max-width: 480px) 360px,
+      <figure className="my-6">
+        <Image
+          src={generateImageUrl(value.asset)}
+          alt={value.alt || ""}
+          width={850}
+          height={600}
+          sizes="(max-width: 480px) 360px,
          (max-width: 768px) 480px,
          (max-width: 1024px) 600px,
          (max-width: 1280px) 768px,
          850px"
-        className="my-4 rounded"
-        loading="lazy"
-      />
+          className="rounded"
+          loading="lazy"
+        />
+        {value.caption && (
+          <figcaption className="mt-3 font-lora text-sm leading-6 text-white-secondary">
+            {value.caption}
+          </figcaption>
+        )}
+      </figure>
     ),
     postTable: ({ value }: { value: PostTableBlock }) => <PostTable value={value} />,
   },

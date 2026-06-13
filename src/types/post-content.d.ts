@@ -11,6 +11,7 @@ export type ImageBlock = {
     _type: "reference"
   }
   alt?: string
+  caption?: string
 }
 
 export type PostTableBlock = {
