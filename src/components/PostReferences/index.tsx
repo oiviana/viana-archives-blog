@@ -11,7 +11,7 @@ export default function PostReferences({ references }: PostReferencesProps) {
   }
 
   return (
-    <section className="mt-12 border-t border-background-extralight pt-8 lg:mt-16 lg:pt-10">
+    <section className="mt-12 border-t border-white/8 pt-8 lg:mt-16 lg:pt-10">
       <h2 className="font-jetbrains text-2xl font-semibold text-green-main lg:text-3xl">
         Referências
       </h2>

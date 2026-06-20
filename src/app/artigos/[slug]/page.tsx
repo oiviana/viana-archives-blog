@@ -109,7 +109,7 @@ export default async function PostPage({ params }: PostPageProps) {
       <DocumentTitle title={`${post.postTitle} | Viana Archives`} />
       <Header />
       <ScrollToTopButton />
-      <main className="prose lg:prose-xl max-w-[850px] mx-auto py-10 pt-[5.2rem] px-3.5 lg:px-0">
+      <main className="prose lg:prose-xl max-w-[850px] mx-auto py-10 pb-8 pt-[5.2rem] px-3.5 lg:px-0">
         <Link
           href="/"
           className="flex items-center gap-3 my-5 mt-4 lg:mt-8 font-bitter text-base lg:text-lg text-white-main hover:text-green-main transition-colors"
