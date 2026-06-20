@@ -1,3 +1,4 @@
+import ScrollToTopOnNavigation from "@/components/ScrollToTopOnNavigation"
 import type { Metadata } from "next"
 
 export const metadata: Metadata = {
@@ -11,5 +12,10 @@ export default function ArticleLayout({
 }: Readonly<{
   children: React.ReactNode
 }>) {
-  return children
+  return (
+    <>
+      <ScrollToTopOnNavigation />
+      {children}
+    </>
+  )
 }

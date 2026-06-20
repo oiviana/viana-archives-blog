@@ -14,8 +14,9 @@ interface PostCardProps {
 
 export default function PostCard({ postTitle, slug, thumbnail, postDescription, postCategory, readingTime }: PostCardProps) {
     return (
-        <Link className="bg-[#23212c] rounded w-full p-2 flex flex-col lg:flex-row gap-4 post-card shadow border-2 border-transparent hover:border-green-main transition-all"
+        <Link className="bg-background-light/40 rounded w-full p-2 flex flex-col lg:flex-row gap-4 post-card shadow border-2 border-transparent hover:border-green-main transition-all"
             href={`/artigos/${slug}`}
+            scroll
         >
             <div className="relative overflow-hidden h-47.5 lg:h-55 lg:w-90 lg:min-w-90">
                 <Image
