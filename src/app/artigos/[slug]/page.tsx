@@ -118,21 +118,21 @@ export default async function PostPage({ params }: PostPageProps) {
           Voltar
         </Link>
 
-        <div className="relative overflow-hidden aspect-[16/10] lg:aspect-[850/476]">
+        <div className="relative overflow-hidden aspect-16/10 lg:aspect-850/476">
           <Image
             src={heroImageUrl}
             fill
             sizes="(max-width: 850px) calc(100vw - 28px), 850px"
             alt={post.postTitle}
-            className="border-4 border-[#141217] rounded-3xl object-cover"
+            className="border-4 border-background rounded-3xl object-cover"
             priority
             fetchPriority="high"
           />
-          <div className="absolute bg-linear-to-t from-[#141217] from-35% to-transparent w-full bottom-6 min-[370px]:bottom-1 sm:bottom-0 lg:bottom-0 p-2 lg:px-4 ">
-            <h1 className="text-xl lg:text-[2.5rem] mb-3 font-raleway font-semibold text-white-main">
+          <div className="absolute bg-linear-to-t from-background from-45% via-background/80 via-65% to-transparent w-full bottom-6 min-[370px]:bottom-1 sm:bottom-0 lg:bottom-0 p-2 pt-20 lg:px-4 lg:pt-28">
+            <h1 className="text-xl lg:text-[2.5rem] mb-3 font-raleway font-semibold text-white-main drop-shadow-[0_3px_14px_rgba(0,0,0,0.85)]">
               {post.postTitle}
             </h1>
-            <article className="text-sm lg:text-xl mb-3 font-bitter hidden lg:flex">
+            <article className="text-sm lg:text-xl mb-3 font-bitter hidden lg:flex drop-shadow-[0_2px_10px_rgba(0,0,0,0.85)]">
               {post.postDescription}
             </article>
           </div>
