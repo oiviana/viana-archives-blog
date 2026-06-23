@@ -17,7 +17,7 @@ export default function Header() {
                 <nav>
                     <ul className="flex gap-8 lg:gap-12">
                         <li>
-                            <Link href={"https://oiviana.vercel.app/"}
+                            <Link href={"https://oiviana.com.br"}
                                 className="font-jetbrains text-white-main hover:text-green-main transition-colors"
                             >
                                 Sobre mim
